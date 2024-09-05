@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!--Form Submission confirmation-->
+    {%if success%}
+    
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hello</strong> Form Submittied
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    {%endif%}
+
+    <!--Form-->
+    <div class="container my-3">
+        <h2 class="text-center">Add a task</h2>
+
+        <form action="/" method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label for="task" class="form-label">Task</label>
+                <input type="text" class="form-control" name="task" id="task" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Task-Description</label>
+                <textarea class="form-control" name="desc" id="desc" cols="30" rows="10"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+{% endblock %}
