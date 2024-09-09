@@ -19,8 +19,24 @@
         <tr>
           <th scope="row">{{forloop.counter}}</th>
           <td>{{i.taskTitle}}</td>
-          <td>{{i.taskDesc}}</td>
+          <td>{{i.taskDesc}}</td>          
+      
+          <!--Update Button
+          <td>
+            <button type="button" class="btn btn-success">
+              <a class="nav-link" id="nav-home" aria-current="page" href="/update/{{i.id}}">Update</a>
+            </button>
+          </td>
+          -->
+          <!--Delete Button
+          <td>
+            <button type="button" class="btn btn-danger">
+              Delete
+            </button>
+          </td>
+            -->
         </tr>
+
     {% endfor %}
       </tbody>
     </table>
