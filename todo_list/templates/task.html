@@ -21,20 +21,20 @@
           <td>{{i.taskTitle}}</td>
           <td>{{i.taskDesc}}</td>          
       
-          <!--Update Button
+          <!--Update Button-->
           <td>
             <button type="button" class="btn btn-success">
-              <a class="nav-link" id="nav-home" aria-current="page" href="/update/{{i.id}}">Update</a>
+              <a class="nav-link" id="nav-home" aria-current="page" href="{% url 'update_records' i.id %}">Update</a>
             </button>
           </td>
-          -->
-          <!--Delete Button
+          
+          <!--Delete Button-->
           <td>
             <button type="button" class="btn btn-danger">
-              Delete
+              <a class="nav-link" id="nav-home" aria-current="page" href="{% url 'delete_records' i.id %}">Delete</a>
             </button>
           </td>
-            -->
+
         </tr>
 
     {% endfor %}

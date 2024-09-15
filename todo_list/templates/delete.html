@@ -3,9 +3,9 @@
 
 <!--Form-->
 <div class="container my-3">
-    <h2 class="text-center">Update a task</h2>
+    <h2 class="text-center">Are you sure you want to delete this taks?</h2>
 
-    <form action="{% url 'update_records' task.id %}" method="POST">
+    <form method="POST">
         {% csrf_token %}
 
         <div class="mb-3">
@@ -17,7 +17,7 @@
             <textarea class="form-control" name="desc" id="desc" cols="30" rows="10">{{ task.taskDesc }}</textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">Delete</button>
     </form>
 
 </div>
